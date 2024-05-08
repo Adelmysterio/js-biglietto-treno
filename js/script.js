@@ -55,9 +55,6 @@ else if (age >= 18 && age < 65) {
     let priceFinalShow = track.toFixed(2)
 
     console.warn(priceFinalShow)
-<<<<<<< HEAD
 
     document.getElementById('priceFinalShow').innerHTML = priceFinalShow
-=======
->>>>>>> ad93142f8ace8eb5afd3aab0468f5408b3393dbb
 };
