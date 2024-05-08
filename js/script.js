@@ -1,16 +1,28 @@
-let km = Number.parseInt(prompt('Inserisci il numero di chilometri che desideri percorrere'))
+const priceRaw = 0.276;
+
+const underDiscount = 21;
+
+const overDiscount = 42;
+
+let km = Number.parseInt(prompt('Inserisci il numero di chilometri che desideri percorrere'));
+
+if (isNaN(km)) {
+
+    alert('Valore non valido')
+
+};
 
 let age = Number.parseInt(prompt('Inserisci la tua età'))
 
-const priceRaw = 0.276
+if (isNaN(age)) {
 
-const underDiscount = 21
+    alert('Valore non valido')
 
-const overDiscount = 42
+};
 
-let track = km * priceRaw
+let track = km * priceRaw;
 
-console.log(track)
+document.getElementById ('track').innerHTML = track
 
 if (age < 18) {
 
@@ -21,6 +33,8 @@ if (age < 18) {
     let priceFinalShow = priceFinal.toFixed(2)
 
     console.warn(priceFinalShow)
+
+    document.getElementById('priceFinalShow').innerHTML = priceFinalShow
 }
 
 if (age >= 65) {
@@ -32,11 +46,15 @@ if (age >= 65) {
     let priceFinalShow = priceFinal.toFixed(2);
 
     console.warn(priceFinalShow)
+
+    document.getElementById('priceFinalShow').innerHTML = priceFinalShow
 }
 
 else if (age >= 18 && age < 65) {
-    
+
     let priceFinalShow = track.toFixed(2)
 
     console.warn(priceFinalShow)
-}
+
+    document.getElementById('priceFinalShow').innerHTML = priceFinalShow
+};
