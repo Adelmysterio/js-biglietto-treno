@@ -22,7 +22,9 @@ if (isNaN(age)) {
 
 let track = km * priceRaw;
 
-document.getElementById ('track').innerHTML = track
+let trackShow = track.toFixed(2)
+
+document.getElementById ('track').innerHTML = trackShow
 
 if (age < 18) {
 
